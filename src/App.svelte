@@ -6,12 +6,17 @@
   import telegram from "/site/telegram.png";
   import discord from "/site/discord.png";
   import Gallery from "./lib/Gallery.svelte";
+  import FixedScrollUpButton from "./lib/FixedScrollUpButton.svelte";
 
   let data = _data
 </script>
 
 <section>
-  <div class="fixed top-0 left-0 right-0 bottom-0 bg-gradient"></div>
+  <div class="fixed z-0 top-0 left-0 right-0 bottom-0 bg-gradient"></div>
+</section>
+
+<section>
+  <FixedScrollUpButton></FixedScrollUpButton>
 </section>
 
 <main class="relative">
