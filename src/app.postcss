@@ -1,0 +1,49 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  .black-radial-gradient {
+    @apply bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black
+  }
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(/fonts/quicksand_book.otf);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track transparent */
+::-webkit-scrollbar-track {
+  background: rgba(244, 59, 59, 0);
+  border-radius: 10px;
+  /* display: none; */
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(136, 136, 136);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.bg-gradient
+{
+  background-image: linear-gradient(158deg, #430F6B, #307366); 
+}
+
+html *{
+  font-family: quicksand;
+}
