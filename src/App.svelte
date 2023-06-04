@@ -5,6 +5,11 @@
   import _zorio from "../public/json/zorio.json";
   import _other from "../public/json/other.json";
   import _pmd from "../public/json/pmd.json";
+  import pfp from "../public/site/pfp.jpg";
+  import twitter from "../public/site/twitter.png";
+  import devianart from "../public/site/devianart.png";
+  import telegram from "../public/site/telegram.png";
+  import discord from "../public/site/discord.png";
   import GallerySection from "./lib/GallerySection.svelte";
 
   let comms = _comms;
@@ -26,7 +31,7 @@
             <div
               class="flex flex-row items-center w-full xl:h-20 h-10 justify-start gap-4 place-content-end">
               <img
-                src="/site/pfp.jpg"
+                src="{pfp}"
                 class="h-full p-1 rounded-full"
                 alt="pfp" />
               <h1 class="xl:text-6xl text-2xl text-white font-bold">Rioni</h1>
@@ -35,16 +40,16 @@
             <div
               class="flex flex-raw w-full xl:h-20 h-10 items-center place-content-end pr-4">
               <a href="https://twitter.com/rionisguild" class="flex h-full place-items-center">
-                <img src="/site/twitter.png" alt="twitter" class="h-[70%]"/>
+                <img src="{twitter}" alt="twitter" class="h-[70%]"/>
               </a>
               <a href="https://www.deviantart.com/srioni" class="flex h-full place-items-center">
-                <img src="/site/devianart.png" alt="devianart" class="h-[70%]" />
+                <img src="{devianart}" alt="devianart" class="h-[70%]" />
               </a>
               <a href="https://t.me/rionisguild" class="flex h-full place-items-center">
-                <img src="/site/telegram.png" alt="telegram" class="h-[70%]" />
+                <img src="{telegram}" alt="telegram" class="h-[70%]" />
               </a>
               <a href="https://discordapp.com/users/490599226200424448" class="flex h-full place-items-center">
-                <img src="/site/discord.png" alt="discord" class="h-[70%] pl-2" />
+                <img src="{discord}" alt="discord" class="h-[70%] pl-2" />
               </a>
             </div>
           </div>
