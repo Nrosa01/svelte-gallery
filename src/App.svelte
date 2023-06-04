@@ -1,15 +1,15 @@
 <script>
-  import _comms from "../public/json/comms.json";
-  import _nahi from "../public/json/nahi.json";
-  import _pokemon from "../public/json/pokemon.json";
-  import _zorio from "../public/json/zorio.json";
-  import _other from "../public/json/other.json";
-  import _pmd from "../public/json/pmd.json";
-  import pfp from "../public/site/pfp.jpg";
-  import twitter from "../public/site/twitter.png";
-  import devianart from "../public/site/devianart.png";
-  import telegram from "../public/site/telegram.png";
-  import discord from "../public/site/discord.png";
+  import _comms from "./json/comms.json";
+  import _nahi from "./json/nahi.json";
+  import _pokemon from "./json/pokemon.json";
+  import _zorio from "./json/zorio.json";
+  import _other from "./json/other.json";
+  import _pmd from "./json/pmd.json";
+  import pfp from "/site/pfp.jpg";
+  import twitter from "/site/twitter.png";
+  import devianart from "/site/devianart.png";
+  import telegram from "/site/telegram.png";
+  import discord from "/site/discord.png";
   import GallerySection from "./lib/GallerySection.svelte";
 
   let comms = _comms;
