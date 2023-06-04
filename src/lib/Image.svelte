@@ -5,8 +5,6 @@
   
     const animationType = "motion-safe:animate-fadeIn";
     export let image;
-    let li;
-    const li_classes = "lg:h-[25vh] h-[20vw] flex-grow m-2";
     let enabled = true;
     let expanded = false;
   
@@ -15,14 +13,12 @@
     }
   
     onMount(() => {
-      // Cerrar la imagen expandida al presionar la tecla Escape
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
           expanded = false;
         }
       });
 
-      // Ocultar o desocultar la imagen si coincide su tag con el tag activo o si el tag activo es "All"
       tag.subscribe(value => {
         enabled = false;
         // wait 1 frame for the DOM to update then update enabled with the correct value
@@ -35,10 +31,10 @@
   </script>
   
   {#if enabled}
-  <li class="{li_classes}" bind:this="{li}" in:fade="{{duration: 400}}">
+  <li class="lg:h-[25vh] h-[20vw] flex-grow m-2" in:fade="{{duration: 400}}">
     <img
       data-animate-type="{animationType}"
-      class="max-h-full min-w-full object-cover align-bottom rounded-xl js-show-on-scroll"
+      class="max-h-full min-w-full object-cover align-bottom rounded-xl"
       src="{image.src}"
       alt="{image.alt}"
       loading="lazy"

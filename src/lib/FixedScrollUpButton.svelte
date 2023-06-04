@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import up_arrow from "/site/up_arrow.png";
   
     let showButton = false;
   
@@ -39,6 +40,6 @@
     on:click={scrollToTop}
     on:keydown
   >
-    <img src="/site/up_arrow.png" alt="up arrow"/>
+    <img src="{up_arrow}" alt="up arrow"/>
   </button>
   

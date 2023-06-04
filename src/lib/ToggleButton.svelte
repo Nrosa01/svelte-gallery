@@ -6,7 +6,7 @@
     export let enabled = false;
 
     function toggle() {
-      enabled = !enabled;
+      enabled = text === "All" || !enabled;
         if (enabled)
             activateTag(text);
         else 
@@ -18,7 +18,7 @@
         if (value == text) {
           enabled = true;
         } else {
-          enabled = false;
+            enabled = false;
         }
       });
     });
