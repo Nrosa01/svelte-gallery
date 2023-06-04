@@ -1,23 +1,13 @@
 <script>
-  import _comms from "./json/comms.json";
-  import _nahi from "./json/nahi.json";
-  import _pokemon from "./json/pokemon.json";
-  import _zorio from "./json/zorio.json";
-  import _other from "./json/other.json";
-  import _pmd from "./json/pmd.json";
+  import _data from "./json/data.json";
   import pfp from "/site/pfp.jpg";
   import twitter from "/site/twitter.png";
   import devianart from "/site/devianart.png";
   import telegram from "/site/telegram.png";
   import discord from "/site/discord.png";
-  import GallerySection from "./lib/GallerySection.svelte";
+  import Gallery from "./lib/Gallery.svelte";
 
-  let comms = _comms;
-  let nahi = _nahi;
-  let pokemon = _pokemon;
-  let zorio = _zorio;
-  let other = _other;
-  let pmd = _pmd;
+  let data = _data
 </script>
 
 <section>
@@ -59,12 +49,9 @@
           </div>
         </section>
 
-        <GallerySection bind:images="{pokemon}" title="Pokemon" />
-        <GallerySection bind:images="{pmd}" title="Pokemon Mystery Dungeon" />
-        <GallerySection bind:images="{zorio}" title="Zorio" />
-        <GallerySection bind:images="{nahi}" title="Nahi" />
-        <GallerySection bind:images="{comms}" title="Commissions" />
-        <GallerySection bind:images="{other}" title="Other" />
+        <section>
+          <Gallery bind:images={data} />
+        </section>
 
         <footer class="flex flex-col w-full h-fit pt-2 pb-4 xl:px-16 px-8">
           <h1 class="xl:text-sm text-xs text-slate-300 text-center pb-4">

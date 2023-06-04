@@ -1,7 +1,5 @@
 import os
-import sys
 import json
-import shutil
 import PIL.Image
 
 FORMAT = "webp"
@@ -27,21 +25,27 @@ for dir in list_of_dirs:
 # We want a differnt json file for each folder, so we can use the folder name as the json file name
 
 # For each directory, get the list of all files in that directory
+json_file = open(os.path.join(current_dir, "data.json"), "w")
+json_array = []
 for dir in list_of_dirs:
     # Get the list of all files in the directory
     list_of_files = os.listdir(os.path.join(current_dir, dir))
     # Get the list of all images in the directory
     list_of_images = [f for f in list_of_files if os.path.isfile(os.path.join(current_dir, dir, f)) and f.endswith(EXTENSION)]
-    # Create a json file for this directory in the root directory
-    json_file = open(os.path.join(current_dir, dir + ".json"), "w")
-    # Create an array of objects
-    json_array = []
     # For each image, create an object and add it to the array
     for image in list_of_images:
-        json_array.append({"src": "gallery\\" + os.path.join(dir, image), "title": image})
-    # Write the json array to the json file
-    json.dump(json_array, json_file)
-    # Close the json file
-    json_file.close()
+        # tags is an array of strings, each string is a tag, we only have one tag, the directory name
+        # but if dir name is zorio, pmd or comms, we want to add also the pokemon name as a tag
+        tags = [dir.lower()]
+        if dir == "zorio" or dir == "pmd" or dir == "comms":
+            tags.append("pokemon")
+
+        json_array.append({"src": "gallery\\" + os.path.join(dir, image), "title": image, "tags": tags})
+
+# Write the json array to the json file
+json.dump(json_array, json_file)
+
+# Close the json file
+json_file.close()
 
 # Exit the program
