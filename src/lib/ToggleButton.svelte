@@ -25,8 +25,8 @@
   </script>
   
   <button
-    class={`${enabled ? 'bg-blue-500 hover:bg-blue-700' : 'bg-gray-500 hover:bg-gray-700'} text-white font-bold py-2 px-4 rounded-full`}
+    class={`${enabled ? 'bg-blue-500 hover:bg-blue-700' : 'bg-gray-500 hover:bg-gray-700'} text-white font-bold py-2 px-4 rounded-full w-full text-xs xl:h-fit h-1 flex items-center justify-center`}
     on:click={toggle}>
-    {text}
+    <span class="xl:text-base text-[0.5rem]">{text}</span>
   </button>
   

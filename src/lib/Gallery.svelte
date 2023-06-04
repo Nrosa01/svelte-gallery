@@ -6,10 +6,15 @@
   const tags = ["All", "Comms", "Pokemon", "PMD", "Zorio", "Transform", "Nahi", "Other"]
 </script>
 
-<div class="flex flex-wrap  w-fit min-h-20 max-h-fit place-items-center justify-start gap-4 p-2">
+
+<div class="w-full px-1">
+  <ul class="flex flex-wrap w-fit h-fit">
     {#each tags as tag, i}
-      <ToggleButton text={tag} enabled={i == 0}/>
-    {/each}
+    <li class="flex-grow xl:m-2 m-1">
+    <ToggleButton text={tag} enabled={i == 0}/>
+    </li>
+  {/each}
+  </ul>
 </div>
 
 <div class="w-full">
