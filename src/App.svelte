@@ -20,9 +20,13 @@
   let pmd = _pmd;
 </script>
 
-<main>
+<section>
+  <div class="fixed top-0 left-0 right-0 bottom-0 bg-gradient"></div>
+</section>
+
+<main class="relative">
   <div
-    class="flex flex-col h-auto min-h-screen justify-center place-items-center bg-gradient">
+    class="flex flex-col h-auto min-h-screen justify-center place-items-center">
     <div
       class="flex flex-col w-[85vw] bg-slate-900/75 justify-center place-items-center rounded-[4rem] my-8">
       <div class="w-[90%]">
@@ -62,13 +66,13 @@
         <GallerySection bind:images="{comms}" title="Commissions" />
         <GallerySection bind:images="{other}" title="Other" />
 
-        <footer class="flex flex-col w-full h-fit pt-2 pb-4 px-16">
-          <h1 class="text-sm text-slate-300 text-center pb-4">
+        <footer class="flex flex-col w-full h-fit pt-2 pb-4 xl:px-16 px-8">
+          <h1 class="xl:text-sm text-xs text-slate-300 text-center pb-4">
             The characters and trademarks mentioned are the property of their respective owners.
             their respective owners. This content is used for illustrative purposes only and is not intended to
             infringe the copyrights of the mentioned owners.
           </h1>
-          <a href="https://www.flaticon.com/free-icons/" class="text-slate-300 text-center" title="discord icons">Icons created by Freepik - Flaticon</a>
+          <a href="https://www.flaticon.com/free-icons/" class="text-slate-300 text-center xl:text-sm text-xs" title="discord icons">Icons created by Freepik - Flaticon</a>
         </footer>
       </div>
     </div>
