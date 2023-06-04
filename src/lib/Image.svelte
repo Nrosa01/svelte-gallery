@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { fade, scale, slide } from "svelte/transition";
+    import { fade } from "svelte/transition";
     import { tag } from "../assets/ToggleStore.js";
   
     const animationType = "motion-safe:animate-fadeIn";
@@ -24,13 +24,18 @@
 
       // Ocultar o desocultar la imagen si coincide su tag con el tag activo o si el tag activo es "All"
       tag.subscribe(value => {
-        enabled = value == "All" || image.tags.includes(value.toLowerCase());
+        enabled = false;
+        // wait 1 frame for the DOM to update then update enabled with the correct value
+        requestAnimationFrame(() => {
+          enabled = value == "All" || image.tags.includes(value.toLowerCase());
+        });
+
       });
     });
   </script>
   
   {#if enabled}
-  <li class="{li_classes}" bind:this="{li}" transition:slide="{{ duration: 500 }}">
+  <li class="{li_classes}" bind:this="{li}" in:fade="{{duration: 400}}">
     <img
       data-animate-type="{animationType}"
       class="max-h-full min-w-full object-cover align-bottom rounded-xl js-show-on-scroll"
