@@ -8,7 +8,8 @@
   import Gallery from "./lib/Gallery.svelte";
   import FixedScrollUpButton from "./lib/FixedScrollUpButton.svelte";
 
-  let data = _data
+  // Filter elements of the array whose src ends in $secret (temporary, those drawings have not been published yet but I ain't deleting them from the repo lmao)
+  let data = _data.filter((item) => !item.src.endsWith("$secret.webp"))
 </script>
 
 <section>
