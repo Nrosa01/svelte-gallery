@@ -3,7 +3,7 @@
   import ToggleButton from "./ToggleButton.svelte";
 
   export let images;
-  const tags = ["All", "Comms", "Pokemon", "PMD", "Zorio", "Transform", "Nahi", "Other"]
+  const tags = ["All", "Comms", "Pokemon", "PMD", "Transform", "Zorio", "Nahi", "Other"]
 </script>
 
 
