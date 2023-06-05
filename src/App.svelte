@@ -13,7 +13,7 @@
 </script>
 
 <section>
-  <div class="fixed z-0 top-0 left-0 right-0 bottom-0 bg-gradient"></div>
+  <div class="fixed z-0 top-0 left-0 right-0 bottom-0 bg-gradient h-[115vh] w-screen bg-contain"></div>
 </section>
 
 <section>
