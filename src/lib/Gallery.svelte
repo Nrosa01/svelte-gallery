@@ -1,6 +1,6 @@
 <script>
-    import Image from "./Image.svelte";
-    import ToggleButton from "./ToggleButton.svelte";
+  import Image from "./Image.svelte";
+  import ToggleButton from "./ToggleButton.svelte";
 
   export let images;
   const tags = ["All", "Comms", "Pokemon", "PMD", "Zorio", "Transform", "Nahi", "Other"]

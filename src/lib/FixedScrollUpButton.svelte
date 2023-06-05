@@ -1,18 +1,10 @@
 <script>
-    import { onMount } from 'svelte';
     import up_arrow from "/site/up_arrow.png";
   
     let showButton = false;
   
-    onMount(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    });
-  
     function handleScroll() {
-      const scrollThreshold = window.innerHeight * 0.01;
+      const scrollThreshold = window.innerHeight * 0.25;
       showButton = window.pageYOffset > scrollThreshold;
     }
   
@@ -21,6 +13,8 @@
     }
   </script>
   
+<svelte:window on:scroll={handleScroll} />
+
   <style>
     .fixed-button {
       position: fixed;
@@ -30,13 +24,14 @@
       transition: opacity 0.3s;
     }
   
-    .show-button {
+    .showButton {
       opacity: 1;
     }
   </style>
   
   <button
-    class={`fixed-button ${showButton ? 'show-button' : ''} w-14 mr-4 z-10 bg-slate-900/75 rounded-full p-2`}
+    class={`fixed-button xl:w-14 xl:p-3 w-10 p-[0.6rem] mr-4 z-10 bg-slate-900/75 rounded-full`}
+    class:showButton
     on:click={scrollToTop}
     on:keydown
   >

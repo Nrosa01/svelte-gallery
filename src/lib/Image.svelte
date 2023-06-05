@@ -3,7 +3,6 @@
     import { fade } from "svelte/transition";
     import { tag } from "../assets/ToggleStore.js";
   
-    const animationType = "motion-safe:animate-fadeIn";
     export let image;
     let enabled = true;
     let expanded = false;
@@ -13,12 +12,7 @@
     }
   
     onMount(() => {
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-          expanded = false;
-        }
-      });
-
+      
       tag.subscribe(value => {
         enabled = false;
         // wait 1 frame for the DOM to update then update enabled with the correct value
@@ -28,16 +22,23 @@
 
       });
     });
+
+    function escape(event) {
+      if (event.key === 'Escape') {
+        expanded = false;
+      }
+    }
   </script>
   
+  <svelte:window on:keydown="{escape}" />
+
   {#if enabled}
   <li class="lg:h-[25vh] h-[20vw] flex-grow m-2" in:fade="{{duration: 400}}">
     <img
-      data-animate-type="{animationType}"
       class="max-h-full min-w-full object-cover align-bottom rounded-xl"
       src="{image.src}"
-      alt="{image.alt}"
-      loading="lazy"
+      alt="{image.title}"
+      loading="eager"
       on:keydown
       on:click={toggleExpansion} />
   
