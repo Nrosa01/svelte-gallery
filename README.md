@@ -1,48 +1,30 @@
-# Svelte + Vite
+# What this
 
-This template should help get you started developing with Svelte in Vite.
+Personal page for hosting and displaying low quality copies of my drawings as a showcase for people to see, mainly aimed for people who intend to commission me but what to see more examples of my art, but also for people how just want a nice site to have a quick view at my art. I never upload the original files nor high quality copies of my drawings except for commissioners who get the original files. The files in this site are web, quality 80 and method 6.
 
-## Recommended IDE Setup
+# How this build
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+I used [Svelte](https://svelte.dev) + [TailwindCSS](https://tailwindcss.com) + JS with Vite as a bundler. Icons are from [Flaticon](https://www.flaticon.com/). Images are stored in ``/public``, but the json with its data is stored in /json. The json is generated with a python script that reads the files in ``/public/gallery``, it also converted it from PNG to .webp, made the filename lowercase and replaced spaces with underscores. The script is still in the repo because it's useful, although it's not used anymore. New images are added manually to the json so I can control where is the best spot for that art.
 
-## Need an official Svelte framework?
+## Layout
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+Modern websites tend to use Masonry layout (Kofi gallery, Pinterest) to have a fancy layout that adapts to the contents and the container. I use an horizontal CSS only version of this layout for better readability of the gallery, this kind of horizontal Masonry layout is used by websites like Carrd and Devianart. You can check the code in ``/src/lib/Gallery.svelte``.
 
-## Technical considerations
+## Filter
 
-**Why use this over SvelteKit?**
+I use a svelte store as a middleware. ToggleButtons modify the store, and images suscribes to these changes and make themselves visible or not depending on the tags they have. You can check the code in ``/src/lib/ToggleButton.svelte`` and ``/src/lib/Image.svelte``.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+## Lazy loading
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+I use lazy attribute for ``html`` image tag, it's not the best option, but given all the gallery is between 3-4MB in total this works for now.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+# How to run
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
 ```
+npm install
+npm run dev
+```
+
+# Dependencies
+
+None, just Svelte and TailwindCSS.

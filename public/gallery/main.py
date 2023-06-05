@@ -20,10 +20,6 @@ for dir in list_of_dirs:
         os.rename(os.path.join(current_dir, dir, image.replace(".png", EXTENSION)), os.path.join(current_dir, dir, image.replace(".png", EXTENSION).lower().replace(" ", "_")))
         im.close()
 
-# In the current dir, look at every folder. Every folder contains images, read all images and create a json file array that's:
-# [{src: "path/to/image", title: "image title"}, ...]
-# We want a differnt json file for each folder, so we can use the folder name as the json file name
-
 # For each directory, get the list of all files in that directory
 json_file = open(os.path.join(current_dir, "data.json"), "w")
 json_array = []
