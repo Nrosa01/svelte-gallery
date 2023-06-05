@@ -42,7 +42,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE: https://rioni.es/
+          VITE_BASE: /svelte-gallery
 
       - name: Upload compiled source
         uses: actions/upload-artifact@v2
