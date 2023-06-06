@@ -14,6 +14,24 @@
   font-family: quicksand;
   src: url(/fonts/quicksand_book.otf), local('Arial'), local('Times New Roman');
   font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: quicksand_bold;
+  src: url(/fonts/quicksand_bold.otf), local('Arial'), local('Times New Roman');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(/fonts/quicksand_light.otf), local('Arial'), local('Times New Roman');
+  font-display: swap;
+  font-weight: lighter;
+  font-style: normal;
 }
 
 /* width */
@@ -47,4 +65,26 @@
 
 html *{
   font-family: quicksand, sans-serif;
+}
+body:before {
+  background-attachment: scroll;
+  content: "";
+  display: block;
+  height: var(--background-height);
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: scale(1);
+  width: 100vw;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20width%3D%221024%22%20height%3D%221024%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20circle%20%7B%20fill%3A%20rgba(0,0,0,0.502)%3B%20%7D%20%3C%2Fstyle%3E%20%3Ccircle%20cx%3D%22256%22%20cy%3D%22256%22%20r%3D%221.01%25%22%20%2F%3E%20%3Ccircle%20cx%3D%22768%22%20cy%3D%22768%22%20r%3D%221.01%25%22%20%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(158deg, #430f6b 0%, #307366 100%);
+  background-size: 180px, auto;
+  background-position: center, 0% 0%;
+  background-repeat: repeat, repeat;
+}
+:root {
+  --background-height: 100vh;
+  --viewport-height: 100vh;
 }
