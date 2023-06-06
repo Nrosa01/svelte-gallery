@@ -1,11 +1,11 @@
 <script>
-  import Image from "./Image.svelte";
+  import BackButton from "./BackButton.svelte";
+import Image from "./Image.svelte";
   import ToggleButton from "./ToggleButton.svelte";
 
   export let images;
   const tags = ["All", "Comms", "Pokemon", "PMD", "Transform", "Zorio", "Nahi", "Other"]
 </script>
-
 
 <div class="w-full px-1">
   <ul class="flex flex-wrap w-fit h-fit">
@@ -25,7 +25,11 @@
   </ul>
 </div>
 
-<div class="flex flex-col w-full h-fit pt-2 xl:px-16 px-8">
+<div class="w-full flex justify-center">
+  <BackButton />
+</div>
+
+<div class="flex flex-col w-full h-fit pt-8 xl:px-16 px-8">
   <h1 class="xl:text-sm text-xs text-slate-300 text-center pb-4">
     The characters and trademarks mentioned are the property of their respective owners.
     their respective owners. This content is used for illustrative purposes only and is not intended to

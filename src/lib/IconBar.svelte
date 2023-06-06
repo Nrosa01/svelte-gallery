@@ -1,14 +1,15 @@
 <script>
-  import twitter from "/site/twitter.png";
-  import devianart from "/site/devianart.png";
-  import telegram from "/site/telegram.png";
-  import discord from "/site/discord.png";
+  import twitter from "/site/twitter.webp";
+  import devianart from "/site/devianart.webp";
+  import telegram from "/site/telegram.webp";
+  import discord from "/site/discord.webp";
 
   export let position = "end"
+  export let maxWHeight = "20"
 </script>
 
 <div
-  class="flex flex-raw w-full xl:h-20 h-10 max-h-fit items-center place-content-{position} pr-4">
+  class="flex flex-raw w-full xl:h-{maxWHeight} h-10 max-h-fit items-center place-content-{position} pr-4">
   <a
     href="https://twitter.com/rionisguild"
     class="flex h-full place-items-center">

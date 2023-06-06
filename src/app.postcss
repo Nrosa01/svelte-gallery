@@ -8,11 +8,21 @@
   .black-radial-gradient {
     @apply bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black
   }
+
+  .quicksand
+  {
+    @apply font-[quicksand]
+  }
+
+  .quicksand-bold
+  {
+    @apply font-[quicksand\_bold] font-black
+  }
 }
 
 @font-face {
   font-family: quicksand;
-  src: url(/fonts/quicksand_book.otf), local('Arial'), local('Times New Roman');
+  src: url(/fonts/quicksand_book.otf), local('sans-serif'), local('Arial'), local('Times New Roman');
   font-display: swap;
   font-weight: normal;
   font-style: normal;

@@ -1,0 +1,153 @@
+<script>
+  import prices_shaded from "../json/prices_shaded.json";
+  import prices_lined from "../json/prices_lined.json";
+  import prices_posttf from "../json/prices_posttf.json";
+  import Image from "./Image.svelte";
+    import BackButton from "./BackButton.svelte";
+</script>
+
+<div
+  class="w-full text-center items-center justify-center place-content-center flex flex-col">
+  <section>
+    <h2
+      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      Shaded / Painting
+    </h2>
+    <p
+      class="text-white xl:text-2xl text-lg font-bold font-[quicksand] xl:py-8 py-4">
+      This is the kind of work I usually upload to social medias. It can be
+      lined but I tend to prefer doing lineless. Fullbody.
+    </p>
+
+    <div class="w-full">
+      <ul class="flex flex-wrap w-full h-fit">
+        {#each prices_shaded as i}
+          <Image bind:image="{i}" />
+        {/each}
+      </ul>
+    </div>
+
+    <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
+      Base price starting at <span class="quicksand-bold">50</span><span
+        >€</span>
+    </h3>
+    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
+  </section>
+
+  <section>
+    <h2
+      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      LINED / MINIMAL SHADING
+    </h2>
+    <p
+      class="text-white xl:text-2xl text-lg font-bold font-[quicksand] xl:py-8 py-4">
+      This gets you a clean lined drawing with flat colours and some minimal
+      shading. Fullbody
+    </p>
+
+    <div class="w-full">
+      <ul class="flex flex-wrap w-full h-fit">
+        {#each prices_lined as i}
+          <Image bind:image="{i}" />
+        {/each}
+      </ul>
+    </div>
+
+    <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
+      Base price starting at <span class="quicksand-bold">30</span><span
+        >€</span>
+    </h3>
+    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
+  </section>
+
+  <section>
+    <h2
+      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      POST TF DOODLE PAGE
+    </h2>
+    <p>
+      <span
+        class="block text-white xl:text-xl text-lg font-bold font-[quicksand] xl:pt-8 pt-4">
+        A simple 3-5 panel sequence showing a character already transformed
+        reacting to his new body or in some situation due to it.
+      </span>
+
+      <span
+        class="block text-white xl:text-xl text-lg font-bold font-[quicksand] xl:py-4 py-2">
+        These drawings are a flat style with minimal shading and they are a
+        little more simplified than other of my drawings.
+      </span>
+
+      <span
+        class="block text-white xl:text-xl text-lg font-bold font-[quicksand] xl:pb-4 pb-2">
+        Background isn't included
+      </span>
+    </p>
+
+    <div class="w-full">
+      <ul class="flex flex-wrap w-full h-fit">
+        {#each prices_posttf as i}
+          <Image bind:image="{i}" />
+        {/each}
+      </ul>
+    </div>
+
+    <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
+      Base price starting at <span class="quicksand-bold">45</span><span
+        >€</span>
+    </h3>
+    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
+  </section>
+
+  <section class="flex flex-col w-full items-center justify-center">
+    <h2
+      class="text-light xl:text-5xl text-2xl pt-4 pb-8 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      Extras
+    </h2>
+    <div class="w-[50rem] text-beauty xl:text-2xl text-lg font-semibold">
+      <div>
+        <table class="w-full">
+          <thead>
+            <tr>
+              <th class="py-4 border-b-2 border-white/25 quicksand-bold"
+                >Addon</th>
+              <th class="py-4 border-b-2 border-white/25 quicksand-bold"
+                >Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-4 border-b border-white/10">Rough Background</td>
+              <td class="py-4 border-b border-white/10"
+                >15<span class="font-light">€</span></td>
+            </tr>
+            <tr>
+              <td class="py-4 border-b border-white/10">Background</td>
+              <td class="py-4 border-b border-white/10"
+                >30<span class="font-light">€</span></td>
+            </tr>
+            <tr>
+              <td class="py-4">Extra Character*</td>
+              <td class="py-4">Base price of the tier</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p>
+        <span
+          class="block text-white text-sm font-bold font-[quicksand] xl:pt-8 pt-4">
+          *Extra Character doesn't apply to Post TF Doodle Page category
+Extra Character price vary depending on the difficulty
+        </span>
+  
+        <span
+          class="block text-white xl:text-xl text-lg font-bold font-[quicksand] xl:py-4 py-2">
+          Feel free to DM me about any doubt or inquiry! You can request things that aren't listed here.
+        </span>
+      </p>
+  </section>
+
+  <BackButton />
+</div>

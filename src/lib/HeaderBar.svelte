@@ -1,32 +1,41 @@
 <script>
-    import IconBar from './IconBar.svelte';
-    import pfp from '/site/pfp.jpg';
+  import { fade } from "svelte/transition";
+  import IconBar from "./IconBar.svelte";
+  import pfp from "/site/pfp.webp";
 
-    const imgWrapperClass_not_home = "flex flex-row items-center w-full xl:h-20 min-h-10 h-fit justify-start gap-4 place-content-end"
-    const img_not_home = "h-full min-h-[4rem] max-h-[6rem] p-1 rounded-full"
-    const text_not_home = "xl:text-6xl text-5xl text-white font-black"
-  </script>
-  
-  <style>
-    .text-home {
-      font-family: quicksand_bold;
-      letter-spacing: 0.125rem;
-      font-size: 3.5em;
-      line-height: 1.375;
-      text-transform: uppercase;
-      color: #FF8CA8;
-      -webkit-text-fill-color: #FF8CA8;
-      font-weight: 900;
-    }
-  </style>
-  
-  <div class="flex flex-col items-center lg:flex-row xl:justify-center xl:pb-4 my-8 pt-8 overflow-hidden transition-all">
-      <div class="{imgWrapperClass_not_home}">
-        <img src="{pfp}" class="{img_not_home}" alt="pfp" style="box-shadow: 0rem 1.75rem 2rem 0rem RGBA(28, 7, 54, 0.25)" />
-        <h1 class="{text_not_home}" >Rioni</h1>
-      </div>
-    <div class="w-full" >
-        <IconBar />
+  let backdrop = false;
+
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const scrollThreshold = windowHeight * 0.1; // 20% del viewheight
+
+    backdrop = scrollPosition > scrollThreshold;
+  }
+</script>
+
+<svelte:window on:scroll="{handleScroll}" />
+
+<section
+  class="w-full sticky top-0 flex justify-center backdrop-blur-xl"
+  class:backdrop
+  in:fade>
+  <div class="grid grid-cols-2 place-items-center xl:pb-4 pt-8 w-[90%]">
+    <div
+      class="flex flex-row items-center w-full xl:h-20 h-10 justify-start gap-4 place-content-end">
+      <a href="#home" class="h-full"><img src="{pfp}" class="h-full p-1 rounded-full" alt="pfp" /></a>
+      <h1 class="xl:text-6xl text-2xl text-white font-bold">Rioni</h1>
     </div>
+
+    <IconBar />
   </div>
-  
+</section>
+
+<style>
+  .backdrop {
+    --tw-backdrop-blur: blur(8px);
+    backdrop-filter: brightness(0.25) var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
+    transition: backdrop-filter 0.3s ease;
+  }
+</style>

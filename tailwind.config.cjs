@@ -3,18 +3,12 @@ const config = {
 
   theme: {
     extend: {
-      animation:{
-        fadeIn: 'fadeIn 0.5s ease-in forwards',
+      colors: {
+        beauty: '#ff8ca8',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
+      fontSize: {
+        'xxs': '0.425rem', // Tamaño de texto xxs
       },
-      variants: {
-        animation: ['motion-safe']
-      }
     },
   },
 
