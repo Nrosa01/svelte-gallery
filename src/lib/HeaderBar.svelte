@@ -24,7 +24,7 @@
     <div
       class="flex flex-row items-center w-full xl:h-20 h-10 justify-start gap-4 place-content-end">
       <a href="#home" class="h-full"><img src="{pfp}" class="h-full p-1 rounded-full" alt="pfp" /></a>
-      <h1 class="xl:text-6xl text-2xl text-white font-bold">Rioni</h1>
+      <h1 class="xl:text-6xl text-2xl text-white quicksand font-bold">Rioni</h1>
     </div>
 
     <IconBar />

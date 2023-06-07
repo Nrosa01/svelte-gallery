@@ -18,6 +18,31 @@
   {
     @apply font-[quicksand\_bold] font-black
   }
+
+  .title
+  {
+    @apply xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty
+  }
+
+  .title-bold
+  {
+    @apply xl:text-5xl text-2xl pt-4 uppercase font-[quicksand\_bold] font-bold tracking-widest text-beauty
+  }
+
+  .paragraph
+  {
+    @apply text-white xl:text-2xl text-lg font-bold font-[quicksand] xl:py-8 py-4
+  }
+
+  .paragraph-light
+  {
+    @apply text-white xl:text-2xl text-lg font-extralight font-[quicksand] xl:py-8 py-4
+  }
+
+  .paragraph-lighter
+  {
+    @apply text-white xl:text-base text-sm font-extralight font-[quicksand] xl:py-2 py-1
+  }
 }
 
 @font-face {
@@ -73,9 +98,6 @@
   background-image: linear-gradient(158deg, #430F6B, #307366); 
 }
 
-html *{
-  font-family: quicksand, sans-serif;
-}
 body:before {
   background-attachment: scroll;
   content: "";

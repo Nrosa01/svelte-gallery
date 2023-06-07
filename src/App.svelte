@@ -7,10 +7,9 @@
   import { fade } from "svelte/transition";
   import Prices from "./lib/Prices.svelte";
   import { deactivateTag } from "./assets/ToggleStore.js";
-    import StickyBar from "./lib/StickyBar.svelte";
+    import Tos from "./lib/Tos.svelte";
 
-
-  let currentHash = '';
+  let currentHash = location.hash;
 
   function handleHashChange() {
     currentHash = location.hash;
@@ -50,7 +49,7 @@
         </section>
         {:else if currentHash === '#tos'}
         <section>
-          
+          <Tos />
         </section>
         {/if}
 

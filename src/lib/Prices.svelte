@@ -10,11 +10,11 @@
   class="w-full text-center items-center justify-center place-content-center flex flex-col">
   <section>
     <h2
-      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      class="title">
       Shaded / Painting
     </h2>
     <p
-      class="text-white xl:text-2xl text-lg font-bold font-[quicksand] xl:py-8 py-4">
+      class="text-white xl:text-2xl text-lg font-bold quicksand xl:py-8 py-4">
       This is the kind of work I usually upload to social medias. It can be
       lined but I tend to prefer doing lineless. Fullbody.
     </p>
@@ -27,8 +27,8 @@
       </ul>
     </div>
 
-    <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
-      Base price starting at <span class="quicksand-bold">50</span><span
+    <h3 class="text-white text-2xl font-bold quicksand pt-8">
+      Base price starting at <span class="quicksand-bold">50</span><span class="font-semibold font-sans"
         >€</span>
     </h3>
     <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
@@ -36,7 +36,7 @@
 
   <section>
     <h2
-      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      class="title">
       LINED / MINIMAL SHADING
     </h2>
     <p
@@ -54,7 +54,7 @@
     </div>
 
     <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
-      Base price starting at <span class="quicksand-bold">30</span><span
+      Base price starting at <span class="quicksand-bold">30</span><span class="font-semibold font-sans"
         >€</span>
     </h3>
     <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
@@ -62,7 +62,7 @@
 
   <section>
     <h2
-      class="text-light xl:text-5xl text-2xl pt-4 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      class="title">
       POST TF DOODLE PAGE
     </h2>
     <p>
@@ -93,15 +93,14 @@
     </div>
 
     <h3 class="text-white text-2xl font-bold font-[quicksand] pt-8">
-      Base price starting at <span class="quicksand-bold">45</span><span
-        >€</span>
+      Base price starting at <span class="quicksand-bold">45</span><span class="font-semibold font-sans">€</span>
     </h3>
     <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
   </section>
 
   <section class="flex flex-col w-full items-center justify-center">
     <h2
-      class="text-light xl:text-5xl text-2xl pt-4 pb-8 uppercase font-[quicksand] tracking-widest font-black text-beauty">
+      class="title pb-8">
       Extras
     </h2>
     <div class="w-[50rem] text-beauty xl:text-2xl text-lg font-semibold">
@@ -117,18 +116,18 @@
           </thead>
           <tbody>
             <tr>
-              <td class="py-4 border-b border-white/10">Rough Background</td>
-              <td class="py-4 border-b border-white/10"
-                >15<span class="font-light">€</span></td>
+              <td class="py-4 border-b border-white/10 quicksand">Rough Background</td>
+              <td class="py-4 border-b border-white/10 quicksand"
+                >15<span class="font-light font-sans">€</span></td>
             </tr>
             <tr>
-              <td class="py-4 border-b border-white/10">Background</td>
-              <td class="py-4 border-b border-white/10"
-                >30<span class="font-light">€</span></td>
+              <td class="py-4 border-b border-white/10 quicksand">Background</td>
+              <td class="py-4 border-b border-white/10 quicksand"
+                >30<span class="font-light font-sans">€</span></td>
             </tr>
             <tr>
-              <td class="py-4">Extra Character*</td>
-              <td class="py-4">Base price of the tier</td>
+              <td class="py-4 quicksand">Extra Character*</td>
+              <td class="py-4 quicksand">Base price of the tier</td>
             </tr>
           </tbody>
         </table>
@@ -137,13 +136,13 @@
 
     <p>
         <span
-          class="block text-white text-sm font-bold font-[quicksand] xl:pt-8 pt-4">
+          class="block text-white text-sm font-bold quicksand xl:pt-8 pt-4">
           *Extra Character doesn't apply to Post TF Doodle Page category
 Extra Character price vary depending on the difficulty
         </span>
   
         <span
-          class="block text-white xl:text-xl text-lg font-bold font-[quicksand] xl:py-4 py-2">
+          class="block text-white xl:text-xl text-lg font-bold quicksand xl:py-4 py-2">
           Feel free to DM me about any doubt or inquiry! You can request things that aren't listed here.
         </span>
       </p>

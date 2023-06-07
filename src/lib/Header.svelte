@@ -37,7 +37,7 @@
             Gallery
         </a>
         <a href="#tos" class="flex justify-center items-center bg-transparent text-white font-semibold hover:text-[#ff8ca8] text-sm py-2 px-4 border border-[#FFFFFF2B] hover:border-[#ff8ca8] rounded w-32 h-11 uppercase">
-            Tos
+            TOS
         </a>
     </div>
     <div>
