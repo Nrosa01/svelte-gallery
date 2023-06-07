@@ -20,7 +20,7 @@ import Image from "./Image.svelte";
 <div class="w-full">
   <ul class="flex flex-wrap w-full h-fit">
     {#each images as i}
-       <Image bind:image={i} />
+       <Image image={i} thumbnail={{...i, src: i.src.replace('gallery\\', 'thumbnails\\')}}  />
     {/each}
   </ul>
 </div>
