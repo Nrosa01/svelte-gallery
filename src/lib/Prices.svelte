@@ -22,7 +22,7 @@
     <div class="w-full">
       <ul class="flex flex-wrap w-full h-fit">
         {#each prices_shaded as i}
-          <Image bind:image="{i}" />
+          <Image image="{i}" thumbnail={{...i, src: i.src.replace('gallery\\', 'thumbnails\\')}}/>
         {/each}
       </ul>
     </div>
@@ -48,7 +48,7 @@
     <div class="w-full">
       <ul class="flex flex-wrap w-full h-fit">
         {#each prices_lined as i}
-          <Image bind:image="{i}" />
+          <Image image="{i}" thumbnail={{...i, src: i.src.replace('gallery\\', 'thumbnails\\')}} />
         {/each}
       </ul>
     </div>
@@ -87,7 +87,7 @@
     <div class="w-full">
       <ul class="flex flex-wrap w-full h-fit">
         {#each prices_posttf as i}
-          <Image bind:image="{i}" />
+          <Image image="{i}" thumbnail={{...i, src: i.src.replace('gallery\\', 'thumbnails\\')}}/>
         {/each}
       </ul>
     </div>
