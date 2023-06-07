@@ -103,9 +103,9 @@
       class="title pb-8">
       Extras
     </h2>
-    <div class="w-[50rem] text-beauty xl:text-2xl text-lg font-semibold">
+    <div class="flex w-[50rem] text-beauty xl:text-2xl md:text-xl sm:text-base text-xs font-semibold justify-center">
       <div>
-        <table class="w-full">
+        <table>
           <thead>
             <tr>
               <th class="py-4 border-b-2 border-white/25 quicksand-bold"
