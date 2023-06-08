@@ -65,16 +65,39 @@
           I need a 2D ref, if possible unshaded.</span>
       </p>
     </div>
+    <div>
+      <h2 class="title pb-8 mt-8">How to order</h2>
+      <p>
+        <span class="paragraph">
+          Send me a DM (<a class="link" href="https://twitter.com/rionisguild">Twitter</a> or <a class="link" href="https://discordapp.com/users/490599226200424448">Discord</a>), or mail <a class="link" href="mailto:business@rioni.es ">Rioni</a> with the following information:<br />
+      </p>
+      <p class="pt-4 flex flex-cols justify-evenly">
+        <span class="paragraph">
+          Commission type<br />
+          Character ref<br />
+          Pose / Drawing description<br />
+          Background (if any)</span>
+      </p>
+
+      <p class="paragraph-light xl:text-base text-sm !py-0">
+        The more refs and info you provide, the better.<br />
+        But of course if you don't have a clear idea
+        of what you want, say you want a post tf art of your character<br>
+        but you don't know the pose, reaction or setting. I'll try to
+        come up with something that suits your character.
+      </p>
+      
+    </div>
 </div>
     <p class="flex flex-col pt-8">
-      <span
-        ><span class="text-beauty font-bold">Additional information</span></span
-      ><span class="paragraph-lighter"
+      <span class="py-4"
+        ><span class="title">Additional information</span></span
+      ><span class="paragraph-light xl:pb-4 py-2"
         >Complex designs can incur into additional charges</span
-      ><span class="paragraph-lighter"
+      ><span class="paragraph-light !py-0"
         >*I can draw humans, but I&#39;m not really experienced with it, for
-        post tf art I can draw headshots, my struggles are complex body poses
-        and hands. I prefer to avoid drawings humans now except for headshots</span>
+        post tf art I can draw headshots.<br>My struggles are complex body poses
+        and hands. I prefer to avoid drawings humans now except for headshots.</span>
     </p>
   </div>
   <div class="w-full flex justify-center">

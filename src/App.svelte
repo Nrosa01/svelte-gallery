@@ -37,18 +37,20 @@
       {:else}
         <HeaderBar />
       {/if}
-      <div class="w-[90%]">
 
+      <div class="w-[90%]">
         {#if currentHash === '#gallery'}
         <section in:fade>
           <Gallery images={_data.filter((item) => !item.src.endsWith("$secret.webp"))} />
         </section>
         {:else if currentHash === '#prices'}
         <section in:fade>
+          <hr class="mt-2 mb-4 h-0.5 border-t-0 bg-neutral-100/10" />
           <Prices />
         </section>
         {:else if currentHash === '#tos'}
-        <section>
+        <section in:fade>
+          <hr class="mt-2 mb-4 h-0.5 border-t-0 bg-neutral-100/10" />
           <Tos />
         </section>
         {/if}
