@@ -1,13 +1,27 @@
 <script>
+    import CarouselGallery from "./CarouselGallery.svelte";
     import Image from "./Image.svelte";
-
+  
     export let images;
-</script>
-
-<div class="w-full">
+    let carousel = null;
+  
+    function handleImageClick(event) {
+      carousel.show(event.detail);
+    }
+  </script>
+  
+  <div class="w-full">
     <ul class="flex flex-wrap w-full h-fit">
-      {#each images as i}
-         <Image image={i} thumbnail={{...i, src: i.src.replace('gallery\\', 'thumbnails\\')}}  />
+      {#each images as image, index}
+        <Image
+          tags={image.tags}
+          image={{...image, src: image.src.replace('gallery\\', 'thumbnails\\')}}
+          {index}
+          on:imageClick={handleImageClick}
+        />
       {/each}
     </ul>
   </div>
+  
+  <CarouselGallery bind:this={carousel} {images} />
+  

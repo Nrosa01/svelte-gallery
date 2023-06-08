@@ -1,7 +1,6 @@
 <script>
   import BackButton from "./BackButton.svelte";
-    import Gallery from "./Gallery.svelte";
-import Image from "./Image.svelte";
+  import Gallery from "./Gallery.svelte";
   import ToggleButton from "./ToggleButton.svelte";
 
   export let images;
