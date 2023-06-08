@@ -4,6 +4,7 @@
   import prices_posttf from "../json/prices_posttf.json";
   import Image from "./Image.svelte";
   import BackButton from "./BackButton.svelte";
+    import Gallery from "./Gallery.svelte";
 
   const categories = [
     {
@@ -33,13 +34,7 @@
       <h2 class="title">{category.title}</h2>
       <p class="text-white xl:text-2xl text-lg font-bold quicksand xl:py-8 py-4">{category.description}</p>
 
-      <div class="w-full">
-        <ul class="flex flex-wrap w-full h-fit">
-          {#each category.prices as price}
-            <Image image={price} thumbnail={{...price, src: price.src.replace('gallery\\', 'thumbnails\\')}}/>
-          {/each}
-        </ul>
-      </div>
+      <Gallery images={category.prices} />
 
       <h3 class="text-white text-2xl font-bold quicksand pt-8">
         Base price starting at <span class="quicksand-bold">{category.basePrice}</span><span class="font-semibold font-sans">€</span>

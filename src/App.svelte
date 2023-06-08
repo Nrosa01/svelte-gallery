@@ -1,13 +1,13 @@
 <script>
   import _data from "./json/data.json";
-  import Gallery from "./lib/Gallery.svelte";
+  import Gallery from "./lib/GallerySection.svelte";
   import FixedScrollUpButton from "./lib/FixedScrollUpButton.svelte";
   import Header from "./lib/Header.svelte";
   import HeaderBar from "./lib/HeaderBar.svelte";
   import { fade } from "svelte/transition";
-  import Prices from "./lib/Prices.svelte";
+  import Prices from "./lib/PricesSection.svelte";
   import { deactivateTag } from "./assets/ToggleStore.js";
-    import Tos from "./lib/Tos.svelte";
+    import Tos from "./lib/TosSection.svelte";
 
   let currentHash = location.hash;
 
