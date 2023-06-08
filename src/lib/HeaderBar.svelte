@@ -1,7 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
   import IconBar from "./IconBar.svelte";
-  import pfp from "/site/pfp.webp";
 
   let backdrop = false;
 
@@ -23,7 +22,7 @@
   <div class="grid grid-cols-2 place-items-center xl:pb-4 pt-8 w-[90%]">
     <div
       class="flex flex-row items-center w-full xl:h-20 h-10 justify-start gap-4 place-content-end">
-      <a href="#home" class="h-full"><img src="{pfp}" class="h-full p-1 rounded-full" alt="pfp" /></a>
+      <a href="#home" class="h-full"><img class="h-full p-1 rounded-full site-image" alt="pfp" /></a>
       <h1 class="xl:text-6xl text-2xl text-white quicksand font-bold">Rioni</h1>
     </div>
 
