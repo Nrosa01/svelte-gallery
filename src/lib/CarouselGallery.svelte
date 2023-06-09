@@ -45,6 +45,8 @@
   }
 
   function handleKeyDown(event) {
+    if(!expanded) return
+
     if (event.key === "Escape") {
       closeImage();
     } else if (event.key === "ArrowLeft") {
@@ -55,6 +57,8 @@
   }
 
   function handleTouchStart(event) {
+    if(!expanded) return
+
     if (event.touches.length === 1) {
       const t = event.touches[0];
       touch.startX = t.clientX;
@@ -63,6 +67,8 @@
   }
 
   function handleTouchEnd(event) {
+    if(!expanded) return
+
     if (event.changedTouches.length === 1) {
       const t = event.changedTouches[0];
       const deltaX = t.clientX - touch.startX;
@@ -81,6 +87,8 @@
   }
 
   function handleLeftArrow() {
+    if(!expanded) return
+
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     flyX = -40
     flyY = 0
@@ -88,6 +96,8 @@
   }
 
   function handleRightArrow() {
+    if(!expanded) return
+
     currentIndex = (currentIndex + 1) % images.length;
     flyX = 40
     flyY = 0
@@ -105,7 +115,7 @@
     on:keydown>
     {#if !loaded}
       <div
-        class="fixed top-0 left-0 right-0 bottom-0 z-10 flex flex-col items-center justify-center text-white animate-pulse select-none"
+        class="fixed top-0 left-0 right-0 bottom-0 z-5 flex flex-col items-center justify-center text-white animate-pulse select-none"
         transition:fade>
         <img class="loading-image" alt="loading nahi" />
         <span class="paragraph">Loading...</span>
