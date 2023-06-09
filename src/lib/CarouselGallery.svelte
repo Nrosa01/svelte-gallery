@@ -1,5 +1,7 @@
 <script>
   import { fade, fly } from "svelte/transition";
+  import { tag } from "../assets/ToggleStore.js";
+  import { onMount } from "svelte";
 
   export let images;
   let currentIndex;
@@ -8,6 +10,7 @@
   let expanded = false;
   let loaded = false;
   let currentImage = null;
+  let currentTag = "All";
   let touch = { startX: 0, startY: 0 };
   let flyX = 0;
   let flyY = 20;
@@ -45,7 +48,7 @@
   }
 
   function handleKeyDown(event) {
-    if(!expanded) return
+    if (!expanded) return;
 
     if (event.key === "Escape") {
       closeImage();
@@ -57,7 +60,7 @@
   }
 
   function handleTouchStart(event) {
-    if(!expanded) return
+    if (!expanded) return;
 
     if (event.touches.length === 1) {
       const t = event.touches[0];
@@ -67,7 +70,7 @@
   }
 
   function handleTouchEnd(event) {
-    if(!expanded) return
+    if (!expanded) return;
 
     if (event.changedTouches.length === 1) {
       const t = event.changedTouches[0];
@@ -86,23 +89,44 @@
     }
   }
 
-  function handleLeftArrow() {
-    if(!expanded) return
+  function findNextIndex(startIndex, increment) {
+    let nextIndex = (startIndex + increment + images.length) % images.length;
 
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    flyX = -40
-    flyY = 0
+    // Probably not the most efficient way to do this, like I'm doing a linear search that involves checking against an array for every image
+    // If I have time later I'll cache the indices I already have in a map or something, just in case the users really use the carousel view
+    while (
+      currentTag !== "all" &&
+      !images[nextIndex].tags.includes(currentTag)
+    ) {
+      nextIndex = (nextIndex + increment + images.length) % images.length;
+    }
+
+    return nextIndex;
+  }
+
+  function handleLeftArrow() {
+    if (!expanded) return;
+
+    currentIndex = findNextIndex(currentIndex, -1);
+    flyX = -40;
+    flyY = 0;
     show(currentIndex);
   }
 
   function handleRightArrow() {
-    if(!expanded) return
+    if (!expanded) return;
 
-    currentIndex = (currentIndex + 1) % images.length;
-    flyX = 40
-    flyY = 0
+    currentIndex = findNextIndex(currentIndex, 1);
+    flyX = 40;
+    flyY = 0;
     show(currentIndex);
   }
+
+  onMount(() => {
+    tag.subscribe((value) => {
+      currentTag = value.toLowerCase();
+    });
+  });
 </script>
 
 <svelte:window on:keydown="{handleKeyDown}" />
