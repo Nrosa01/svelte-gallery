@@ -138,19 +138,19 @@
     class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75 z-10 backdrop-blur-sm"
     transition:fade="{{ duration: 150 }}"
     on:click="{handleClickInside}"
-    on:keydown>
+    on:keydown
+    on:touchstart="{handleTouchStart}"
+    on:touchend="{handleTouchEnd}">
     {#if !loaded}
       <div
         class="fixed top-0 left-0 right-0 bottom-0 z-5 flex flex-col items-center justify-center text-white animate-pulse select-none"
-        transition:fade="{{ delay: 100 }}">
+        in:fade="{{ delay: 500 }}"
+        out:fade>
         <img class="loading-image" alt="loading nahi" />
         <span class="paragraph">Loading...</span>
       </div>
     {:else}
-      <div
-        on:touchstart="{handleTouchStart}"
-        on:touchend="{handleTouchEnd}"
-        class="z-50">
+      <div class="z-50">
         <button class="close-button-t" on:click="{closeImage}" transition:fade>
         </button>
         <img
