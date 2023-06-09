@@ -5,7 +5,7 @@
 
   export let images;
   let currentIndex;
-  let container;
+  let imageHTML;
 
   let expanded = false;
   let loaded = false;
@@ -22,9 +22,10 @@
     img.src = currentImage.src;
     img.onload = () => {
       loaded = true;
+      flyX *= -1;
       requestAnimationFrame(() => {
-        container.src = currentImage.src;
-        container.alt = currentImage.title;
+        imageHTML.src = currentImage.src;
+        imageHTML.alt = currentImage.title;
       });
     };
   }
@@ -42,7 +43,8 @@
   }
 
   function handleClickInside(event) {
-    if (container && container.contains(event.target)) {
+    // Check if the click was made on the element itself
+    if (event.target === this) {
       closeImage();
     }
   }
@@ -108,7 +110,7 @@
     if (!expanded) return;
 
     currentIndex = findNextIndex(currentIndex, -1);
-    flyX = -40;
+    flyX = 40;
     flyY = 0;
     show(currentIndex);
   }
@@ -117,7 +119,7 @@
     if (!expanded) return;
 
     currentIndex = findNextIndex(currentIndex, 1);
-    flyX = 40;
+    flyX = -40;
     flyY = 0;
     show(currentIndex);
   }
@@ -140,16 +142,19 @@
     {#if !loaded}
       <div
         class="fixed top-0 left-0 right-0 bottom-0 z-5 flex flex-col items-center justify-center text-white animate-pulse select-none"
-        transition:fade>
+        transition:fade="{{ delay: 100 }}">
         <img class="loading-image" alt="loading nahi" />
         <span class="paragraph">Loading...</span>
       </div>
     {:else}
-      <div on:touchstart="{handleTouchStart}" on:touchend="{handleTouchEnd}">
+      <div
+        on:touchstart="{handleTouchStart}"
+        on:touchend="{handleTouchEnd}"
+        class="z-50">
         <button class="close-button-t" on:click="{closeImage}" transition:fade>
         </button>
         <img
-          bind:this="{container}"
+          bind:this="{imageHTML}"
           class="max-w-[90vw] max-h-[90vh] z-50 select-none transition-transform duration-1000"
           loading="lazy"
           src="{currentImage.src}"
