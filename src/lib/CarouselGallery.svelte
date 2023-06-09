@@ -50,7 +50,11 @@
           <span class="paragraph">Loading...</span>
         </div>
       {:else}
+    <div>
+      <button class="close-button-t" on:click={closeImage}>
+      </button>
         <img class="max-w-[90vw] max-h-[90vh] z-50 select-none" in:fade src="{currentImage.src}" alt="{currentImage.alt}" loading="lazy">
+    </div>
       {/if}
     </div>
   {/if}
