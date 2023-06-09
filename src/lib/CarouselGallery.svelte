@@ -16,6 +16,10 @@
     img.src = currentImage.src;
     img.onload = () => {
       loaded = true;
+      requestAnimationFrame(() => {
+        container.src = currentImage.src;
+        container.alt = currentImage.title;
+      });
     };
   }
 
@@ -23,15 +27,16 @@
     currentIndex = index;
     expanded = true;
     loadImage();
-    // wait one frame for the image to load
-    setTimeout(() => {
-      container.src = currentImage.src;
-      container.alt = currentImage.title;
-    });
   }
 
   function closeImage() {
     expanded = false;
+  }
+
+  function handleClickInside(event) {
+    if (container && container.contains(event.target)) {
+      closeImage();
+    }
   }
 
   function handleKeyDown(event) {
@@ -56,7 +61,8 @@
 {#if expanded}
   <div
     class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75 z-10 backdrop-blur-sm"
-    transition:fade="{{ duration: 150 }}">
+    transition:fade="{{ duration: 150 }}" on:click={handleClickInside}
+    on:keydown>
     {#if !loaded}
       <div
         class="fixed top-0 left-0 right-0 bottom-0 z-10 flex flex-col items-center justify-center text-white animate-pulse select-none"
@@ -72,9 +78,12 @@
           bind:this="{container}"
           class="max-w-[90vw] max-h-[90vh] z-50 select-none transition-transform duration-1000"
           loading="lazy"
-          alt="img"
+          src="{currentImage.src}"
+          alt="{currentImage.title}}"
           in:fly="{{ duration: 350, y: 20 }}"
-          out:fly="{{ duration: 125, y: 20 }}" />
+          out:fly="{{ duration: 125, y: 20 }}"
+          on:click={handleClickInside}
+          on:keydown />
         <button
           class="left-arrow-t"
           on:click="{handleLeftArrow}"
