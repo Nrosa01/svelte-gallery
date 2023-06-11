@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "checkJs": true
+  },
+  "extends": "astro/tsconfigs/base"
+}

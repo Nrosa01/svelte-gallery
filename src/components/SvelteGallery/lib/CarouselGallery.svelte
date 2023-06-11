@@ -1,6 +1,6 @@
 <script>
   import { fade, fly } from "svelte/transition";
-  import { tag } from "../assets/ToggleStore.js";
+  import { tag } from "./assets/ToggleStore.js";
   import { onMount } from "svelte";
 
   export let images;
