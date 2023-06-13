@@ -34,12 +34,18 @@
     currentIndex = index;
     expanded = true;
     loadImage();
+
+    // Disable scrolling
+    document.body.style.overflow = "hidden";
   }
 
   function closeImage() {
     flyX = 0;
     flyY = 20;
     expanded = false;
+
+    // Enable scrolling
+    document.body.style.overflow = "auto";
   }
 
   function handleClickInside(event) {

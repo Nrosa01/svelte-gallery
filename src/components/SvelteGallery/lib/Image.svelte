@@ -25,7 +25,7 @@
 </script>
 
 {#if enabled}
-  <li class="lg:h-[25vh] h-[20vw] flex-grow m-2" in:fade="{{ duration: 400 }}">
+  <li class="lg:h-[25vmin] h-[20vmin] flex-grow m-2" in:fade="{{ duration: 400 }}">
     <img
       class="max-h-full min-w-full object-cover align-bottom rounded-xl select-none"
       src="{image.src}"
