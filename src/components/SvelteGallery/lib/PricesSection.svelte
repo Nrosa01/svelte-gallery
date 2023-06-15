@@ -2,7 +2,6 @@
   import prices_shaded from "../../../json/prices_shaded.json";
   import prices_lined from "../../../json/prices_lined.json";
   import prices_posttf from "../../../json/prices_posttf.json";
-  import Image from "./Image.svelte";
   import BackButton from "./BackButton.svelte";
   import Gallery from "./Gallery.svelte";
 
@@ -17,14 +16,14 @@
     {
       title: "LINED / MINIMAL SHADING",
       description:
-        "This gets you a clean lined drawing with flat colours and some minimal shading. Fullbody",
+        "This gets you a clean lined drawing with flat colours and some minimal shading. Fullbody.",
       prices: prices_lined,
       basePrice: 30,
     },
     {
       title: "POST TF DOODLE PAGE",
       description:
-        "A simple 3-5 panel sequence showing a character already transformed reacting to his new body or in some situation due to it. These drawings are a flat style with minimal shading and they are a little more simplified than other of my drawings.Background isn't included",
+        "A simple 3-5 panel sequence showing a character already transformed reacting to his new body or in some situation due to it. These drawings are a flat style with minimal shading and they are a kinda more simplified than other of my drawings. Background isn't included.",
       prices: prices_posttf,
       basePrice: 45,
     },
