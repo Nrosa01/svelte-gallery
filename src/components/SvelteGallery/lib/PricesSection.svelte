@@ -5,6 +5,8 @@
   import BackButton from "./BackButton.svelte";
   import Gallery from "./Gallery.svelte";
 
+  const prices_classes = "text-black xl:text-2xl text-xs font-bold quicksand py-2 bg-beauty px-4 rounded-full w-fit"
+
   const categories = [
     {
       title: "POST TF DOODLE PAGE",
@@ -31,36 +33,36 @@
 </script>
 
 <div
-  class="w-full text-center items-center justify-center place-content-center flex flex-col">
+  class="w-full text-center items-center justify-center place-content-center flex flex-col bg-black">
   {#each categories as category, index}
     <section>
       <h2 class="title">{category.title}</h2>
       <p
-        class="text-white xl:text-2xl text-lg font-bold quicksand xl:py-8 py-4">
+        class="text-white xl:text-base text-sm font-bold quicksand xl:py-8 py-4">
         {category.description}
       </p>
 
       <Gallery images="{category.prices}" />
 
-      <div class="w-full pt-8 flex justify-center gap-4">
+      <div class="w-full pt-8 flex justify-center gap-4 place-items-center">
       {#if index > 0}
-        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+        <h3 class="{prices_classes}">
           Base price starting at <span class="quicksand-bold"
           >{category.basePrice}</span
           ><span class="font-semibold font-sans">€</span> per character
         </h3>
-        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+        <h3 class="{prices_classes}">
           Simple background <span class="quicksand-bold"
           >15</span
           ><span class="font-semibold font-sans">€</span>
         </h3>
-        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+        <h3 class="{prices_classes}">
           Complex background <span class="quicksand-bold"
           >30</span
           ><span class="font-semibold font-sans">€</span>
         </h3>
         {:else}
-        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+        <h3 class="{prices_classes}">
           Base price starting at <span class="quicksand-bold"
           >{category.basePrice}</span
           ><span class="font-semibold font-sans">€</span>
