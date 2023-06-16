@@ -1,9 +1,4 @@
 <script>
-  import twitter from "/site/twitter.webp";
-  import devianart from "/site/devianart.webp";
-  import telegram from "/site/telegram.webp";
-  import discord from "/site/discord.webp";
-
   export let position = "end"
   export let maxWHeight = "20"
 </script>
@@ -13,19 +8,19 @@
   <a
     href="https://twitter.com/rionisguild"
     class="flex h-full place-items-center">
-    <img src="{twitter}" alt="twitter" class="h-[70%]" />
+    <img alt="twitter" class="h-[70%] twitter-icon" />
   </a>
   <a
     href="https://www.deviantart.com/srioni"
     class="flex h-full place-items-center">
-    <img src="{devianart}" alt="devianart" class="h-[70%]" />
+    <img alt="devianart" class="h-[70%] devianart-icon" />
   </a>
   <a href="https://t.me/rionisguild" class="flex h-full place-items-center">
-    <img src="{telegram}" alt="telegram" class="h-[70%]" />
+    <img alt="telegram" class="h-[70%] telegram-icon" />
   </a>
   <a
     href="https://discordapp.com/users/490599226200424448"
     class="flex h-full place-items-center">
-    <img src="{discord}" alt="discord" class="h-[70%] pl-2" />
+    <img alt="discord" class="h-[70%] pl-2 discord-icon" />
   </a>
 </div>
