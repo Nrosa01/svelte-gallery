@@ -35,6 +35,5 @@
     --tw-backdrop-blur: blur(8px);
     backdrop-filter: brightness(0.25) var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
     box-shadow: 0 25px 50px -12px rgb(0, 0, 0);
-    transition: backdrop-filter 0.3s ease;
   }
 </style>
