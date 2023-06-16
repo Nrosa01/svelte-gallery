@@ -3,31 +3,70 @@
   import prices_lined from "../../../json/prices_lined.json";
   import prices_posttf from "../../../json/prices_posttf.json";
   import BackButton from "./BackButton.svelte";
-  import Gallery from "./Gallery.svelte";
-
-  const prices_classes = "text-black xl:text-2xl text-xs font-bold quicksand py-2 bg-beauty px-4 rounded-full w-fit"
+  import PriceListing from "./PriceListing.svelte";
 
   const categories = [
     {
       title: "POST TF DOODLE PAGE",
       description:
         "A simple 3-5 panel sequence showing a character already transformed reacting to his new body or in some situation due to it. These drawings are a flat style with minimal shading and they are a kinda more simplified than other of my drawings. Simple Background is included in this tier.",
-      prices: prices_posttf,
-      basePrice: 45,
+      images: prices_posttf,
+      prices:
+      [
+        {
+          title: "Base price starting at",
+          price: "45",
+          post_title: "",
+        },
+      ]
     },
     {
       title: "Shaded / Painting",
       description:
         "This is the kind of work I usually upload to social medias. It can be lined but I tend to prefer doing lineless. Fullbody.",
-      prices: prices_shaded,
-      basePrice: 50,
+      images: prices_shaded,
+      prices:
+      [
+        {
+          title: "Base price starting at",
+          price: "50",
+          post_title: "per character",
+        },
+        {
+          title: "Simple background",
+          price: "+15",
+          post_title: "",
+        },
+        {
+          title: "Complex background",
+          price: "+30",
+          post_title: "",
+        }
+      ]
     },
     {
       title: "LINED / MINIMAL SHADING",
       description:
         "This gets you a clean lined drawing with flat colours and some minimal shading. Fullbody.",
-      prices: prices_lined,
-      basePrice: 30,
+      images: prices_lined,
+      prices:
+      [
+        {
+          title: "Base price starting at",
+          price: "+30",
+          post_title: "per character",
+        },
+        {
+          title: "Simple background",
+          price: "+15",
+          post_title: "",
+        },
+        {
+          title: "Complex background",
+          price: "+30",
+          post_title: "",
+        }
+      ]
     },
   ];
 </script>
@@ -35,42 +74,7 @@
 <div
   class="w-full text-center items-center justify-center place-content-center flex flex-col bg-black">
   {#each categories as category, index}
-    <section>
-      <h2 class="title">{category.title}</h2>
-      <p
-        class="text-white xl:text-base text-sm font-bold quicksand xl:py-8 py-4">
-        {category.description}
-      </p>
-
-      <Gallery images="{category.prices}" />
-
-      <div class="w-full pt-8 flex justify-center gap-4 place-items-center">
-      {#if index > 0}
-        <h3 class="{prices_classes}">
-          Base price starting at <span class="quicksand-bold"
-          >{category.basePrice}</span
-          ><span class="font-semibold font-sans">€</span> per character
-        </h3>
-        <h3 class="{prices_classes}">
-          Simple background <span class="quicksand-bold"
-          >15</span
-          ><span class="font-semibold font-sans">€</span>
-        </h3>
-        <h3 class="{prices_classes}">
-          Complex background <span class="quicksand-bold"
-          >30</span
-          ><span class="font-semibold font-sans">€</span>
-        </h3>
-        {:else}
-        <h3 class="{prices_classes}">
-          Base price starting at <span class="quicksand-bold"
-          >{category.basePrice}</span
-          ><span class="font-semibold font-sans">€</span>
-        </h3>
-        {/if}
-      </div>
-      <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
-    </section>
+    <PriceListing category="{category}" />
   {/each}
 
   <section class="flex flex-col w-full items-center justify-center">
