@@ -7,6 +7,13 @@
 
   const categories = [
     {
+      title: "POST TF DOODLE PAGE",
+      description:
+        "A simple 3-5 panel sequence showing a character already transformed reacting to his new body or in some situation due to it. These drawings are a flat style with minimal shading and they are a kinda more simplified than other of my drawings. Simple Background is included in this tier.",
+      prices: prices_posttf,
+      basePrice: 45,
+    },
+    {
       title: "Shaded / Painting",
       description:
         "This is the kind of work I usually upload to social medias. It can be lined but I tend to prefer doing lineless. Fullbody.",
@@ -20,19 +27,12 @@
       prices: prices_lined,
       basePrice: 30,
     },
-    {
-      title: "POST TF DOODLE PAGE",
-      description:
-        "A simple 3-5 panel sequence showing a character already transformed reacting to his new body or in some situation due to it. These drawings are a flat style with minimal shading and they are a kinda more simplified than other of my drawings. Background isn't included.",
-      prices: prices_posttf,
-      basePrice: 45,
-    },
   ];
 </script>
 
 <div
   class="w-full text-center items-center justify-center place-content-center flex flex-col">
-  {#each categories as category}
+  {#each categories as category, index}
     <section>
       <h2 class="title">{category.title}</h2>
       <p
@@ -42,55 +42,39 @@
 
       <Gallery images="{category.prices}" />
 
-      <h3 class="text-white text-2xl font-bold quicksand pt-8">
-        Base price starting at <span class="quicksand-bold"
+      <div class="w-full pt-8 flex justify-center gap-4">
+      {#if index > 0}
+        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+          Base price starting at <span class="quicksand-bold"
           >{category.basePrice}</span
-        ><span class="font-semibold font-sans">€</span>
-      </h3>
+          ><span class="font-semibold font-sans">€</span> per character
+        </h3>
+        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+          Simple background <span class="quicksand-bold"
+          >15</span
+          ><span class="font-semibold font-sans">€</span>
+        </h3>
+        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+          Complex background <span class="quicksand-bold"
+          >30</span
+          ><span class="font-semibold font-sans">€</span>
+        </h3>
+        {:else}
+        <h3 class="text-black text-2xl font-bold quicksand py-4 bg-beauty px-4 rounded-full w-fit">
+          Base price starting at <span class="quicksand-bold"
+          >{category.basePrice}</span
+          ><span class="font-semibold font-sans">€</span>
+        </h3>
+        {/if}
+      </div>
       <hr class="my-12 h-0.5 border-t-0 bg-neutral-100/10" />
     </section>
   {/each}
 
   <section class="flex flex-col w-full items-center justify-center">
-    <h2 class="title pb-8">Extras</h2>
-    <div
-      class="flex w-[50rem] text-beauty xl:text-2xl md:text-xl sm:text-base text-xs font-semibold justify-center">
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th class="py-4 border-b-2 border-white/25 quicksand-bold"
-                >Addon</th>
-              <th class="py-4 border-b-2 border-white/25 quicksand-bold"
-                >Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="py-4 border-b border-white/10 quicksand"
-                >Rough Background</td>
-              <td class="py-4 border-b border-white/10 quicksand"
-                >15<span class="font-light font-sans">€</span></td>
-            </tr>
-            <tr>
-              <td class="py-4 border-b border-white/10 quicksand"
-                >Background</td>
-              <td class="py-4 border-b border-white/10 quicksand"
-                >30<span class="font-light font-sans">€</span></td>
-            </tr>
-            <tr>
-              <td class="py-4 quicksand">Extra Character*</td>
-              <td class="py-4 quicksand">Base price of the tier</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
     <p>
-      <span class="block text-white text-sm font-bold quicksand xl:pt-8 pt-4">
-        *Extra Character doesn't apply to Post TF Doodle Page category. Extra
-        Character price may vary depending on the difficulty.
+      <span class="block text-white text-sm font-bold quicksand">
+        Extra Character price may vary depending on the difficulty.
       </span>
       <span
         class="block text-white xl:text-xl text-lg font-bold quicksand xl:py-4 py-2">
