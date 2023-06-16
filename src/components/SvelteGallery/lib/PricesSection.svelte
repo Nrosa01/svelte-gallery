@@ -72,7 +72,7 @@
 </script>
 
 <div
-  class="w-full text-center items-center justify-center place-content-center flex flex-col bg-black">
+  class="w-full text-center items-center justify-center place-content-center flex flex-col">
   {#each categories as category, index}
     <PriceListing category="{category}" />
   {/each}
