@@ -53,7 +53,7 @@
       [
         {
           title: "Base price starting at",
-          price: "+30",
+          price: "30",
           post_title: "per character",
         },
         {
