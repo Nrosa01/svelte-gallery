@@ -42,9 +42,7 @@
         {#if currentHash === "#gallery"}
           <section in:fade>
             <Gallery
-              images="{_data.filter(
-                (item) => !item.src.endsWith('$secret.webp')
-              )}" />
+              images="{_data}" />
           </section>
         {:else if currentHash === "#prices"}
           <section in:fade>
