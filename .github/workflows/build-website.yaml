@@ -22,7 +22,7 @@ jobs:
     name: Build
     steps:
       - name: git-checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Get npm cache directory
         id: npm-cache-dir
@@ -45,7 +45,7 @@ jobs:
           VITE_BASE: https://rioni.es
 
       - name: Upload compiled source
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: website
           path: dist/
@@ -63,7 +63,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
       - name: Deploy to GitHub Pages
