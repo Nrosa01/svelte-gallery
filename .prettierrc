@@ -1,5 +1,0 @@
-{
-  "svelteStrictMode": true,
-  "bracketSameLine": true,
-  "plugins": ["prettier-plugin-svelte", "prettier-plugin-astro"]
-}
