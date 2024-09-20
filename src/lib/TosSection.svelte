@@ -21,6 +21,7 @@
             <li>Post TF themed art</li>
             <li>Humans*</li>
             <li>Backgrounds</li>
+            <li>NSFW*</li>
             <li>Up to 5 characters</li>
           </ul>
         </div>
@@ -30,7 +31,6 @@
         <div class="xl:py-8 px-8 py-4">
           <h2 class="subtitle text-center xl:mb-8 xl:mb-8 mb-4">Won't Draw</h2>
           <ul class=" text-white text-sm">
-            <li>NSFW</li>
             <li>Mecha</li>
             <li>Gore</li>
             <li>Religious, political, ideological symbols</li>
@@ -73,11 +73,17 @@
           <p class="text-white text-sm xl:mb-8 mb-4">
             ETA: 1-2 weeks<br />
             Non-commercial use<br />
-            I save the right to post your drawing online as well as on my web. If you don't want your drawing to be public, you must tell me. I need a 2D ref, if possible unshaded.
+            I save the right to post your drawing online as well as on my web. If you don't want your drawing to be public, you must tell me although that would incur into additional costs. I need a 2D ref, if possible unshaded. If the ref is 3D or I can't understand it well enough I will decline your commission.
           </p>
           <p class="text-white text-sm">
             Complex designs can incur into additional charges.<br />
             *I can draw humans, but I'm not really experienced with it. For post tf art, I can draw headshots. My struggles are complex body poses and hands. I prefer to avoid drawing humans now except for headshots.
+          </p>
+          <p class="text-white text-sm">
+            *NSFW: 
+            <span class="text-yellow-300">
+              I will only draw NSFW if I'm comfortable with it, just ask about it, I like a lots of kinks such as BDSM, size difference, pet play, watersports, forced, hypnosis, etc.
+            </span>
           </p>
         </div>
       </li>
