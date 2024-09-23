@@ -1,19 +1,24 @@
 <script>
-  export let position = "end"
-  export let maxWHeight = "20"
+  export let position = "end";
+  export let maxWHeight = "20";
 </script>
 
 <div
   class="flex flex-raw w-full xl:h-{maxWHeight} h-10 max-h-fit items-center place-content-{position} pr-4">
   <a
-  href="https://itaku.ee/profile/rioni"
-  class="flex h-full place-items-center">
-  <img alt="itaku" class="h-[70%] itaku-icon" />
+    href="https://itaku.ee/profile/rioni"
+    class="flex h-full place-items-center">
+    <img alt="itaku" class="h-[70%] itaku-icon" />
   </a>
   <a
     href="https://twitter.com/rionisguild"
     class="flex h-full place-items-center">
     <img alt="twitter" class="h-[70%] twitter-icon" />
+  </a>
+  <a
+    href="https://bsky.app/profile/rioni.bsky.social"
+    class="flex h-full place-items-center">
+    <img alt="bluesky" class="ml-1 h-[55%] bluesky-icon" />
   </a>
   <a
     href="https://www.deviantart.com/srioni"
