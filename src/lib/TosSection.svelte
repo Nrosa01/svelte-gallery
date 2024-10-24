@@ -82,6 +82,9 @@
             lineart is done. I won't do more than 4 changes. Asking for many
             changes may incur into additional charges. *When payment time comes,
             I'll send you a paypal.me link.
+
+            <br/>
+            I reserve some artistic freedom, there are some things I draw in a specific way and won't change that.
           </p>
         </div>
       </li>

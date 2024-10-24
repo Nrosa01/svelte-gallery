@@ -57,7 +57,7 @@
     {
       title: "DOODLE/COMIC PAGE",
       description:
-        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler than in other tiers with much less shading. Simple Background is included in this tier. Examples show post tf comic because this previously was a post tf tier, but now it's a general tier.",
+        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler and looser than in other tiers with much less shading. Simple Background is included in this tier. Examples show post tf comic because this previously was a post tf tier, but now it's a general tier. This tier also work for 2 character interactions and in general, it's suitable for any multi character drawing.",
       images: prices_posttf,
       prices:
       [

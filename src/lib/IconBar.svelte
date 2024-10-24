@@ -5,11 +5,11 @@
 
 <div
   class="flex flex-raw w-full xl:h-{maxWHeight} h-10 max-h-fit items-center place-content-{position} pr-4">
-  <a
+  <!-- <a
     href="https://itaku.ee/profile/rioni"
     class="flex h-full place-items-center">
     <img alt="itaku" class="h-[70%] itaku-icon" />
-  </a>
+  </a> -->
   <a
     href="https://twitter.com/rionisguild"
     class="flex h-full place-items-center">
