@@ -7,57 +7,9 @@
 
   const categories = [
     {
-      title: "Shaded / Painting",
-      description:
-        "This is the kind of work I usually upload to social medias. It's more polished than the previous tier (although examples are outdated, right now my style is more soft). Can be either thin line, lineless or a mix of both. Fullbody.",
-      images: prices_shaded,
-      prices:
-      [
-        {
-          title: "Base price starting at",
-          price: "50",
-          post_title: "per character",
-        },
-        {
-          title: "Simple background",
-          price: "+15",
-          post_title: "",
-        },
-        {
-          title: "Complex background",
-          price: "+30",
-          post_title: "",
-        }
-      ]
-    },
-    {
-      title: "Rough painting",
-      description:
-        "This gets you a semi clean line with some shading, usually only one shade layer and one light layer. Can be either thin line, lineless or a mix of both. Fullbody.",
-      images: prices_lined,
-      prices:
-      [
-        {
-          title: "Base price starting at",
-          price: "35",
-          post_title: "per character",
-        },
-        {
-          title: "Simple background",
-          price: "+15",
-          post_title: "",
-        },
-        {
-          title: "Complex background",
-          price: "+30",
-          post_title: "",
-        }
-      ]
-    },
-    {
       title: "DOODLE/COMIC PAGE",
       description:
-        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler and looser than in other tiers with much less shading. Simple Background is included in this tier. Examples show post tf comic because this previously was a post tf tier, but now it's a general tier. This tier also work for 2 character interactions and in general, it's suitable for any multi character drawing.",
+        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler and looser than in other tiers with much less shading. Simple Background is included in this tier. Examples show post tf comic because this previously called 'post tf doodle page', but really this can be anything you want. This tier also work for 2 character interactions and in general, it's suitable for any multi character drawing.",
       images: prices_posttf,
       prices:
       [
@@ -73,6 +25,54 @@
         },
       ]
     },
+    {
+      title: "Shaded / Painting",
+      description:
+        "This is the kind of work I usually upload to social medias. It's more polished than the previous tier (although examples are outdated, right now my style is more soft). Can be either thin line, lineless or a mix of both. Fullbody.",
+      images: prices_shaded,
+      prices:
+      [
+        {
+          title: "Base price starting at",
+          price: "50",
+          post_title: "per character",
+        },
+        {
+          title: "Background",
+          price: "+15",
+          post_title: "",
+        },
+        // {
+        //   title: "Complex background",
+        //   price: "+30",
+        //   post_title: "",
+        // }
+      ]
+    },
+    {
+      title: "Rough painting",
+      description:
+        "This gets you a semi clean line with some shading, usually only one shade layer and one light layer. Can be either thin line, lineless or a mix of both. Fullbody.",
+      images: prices_lined,
+      prices:
+      [
+        {
+          title: "Base price starting at",
+          price: "35",
+          post_title: "per character",
+        },
+        {
+          title: "Background",
+          price: "+15",
+          post_title: "",
+        },
+        // {
+        //   title: "Complex background",
+        //   price: "+30",
+        //   post_title: "",
+        // }
+      ]
+    },
   ];
 </script>
 
@@ -86,6 +86,7 @@
     <p>
       <span class="block text-white text-sm font-bold quicksand">
         Extra Character price may vary depending on the difficulty.
+        More complex backgrounds may incur into additional charges.
       </span>
       <span
         class="block text-white xl:text-xl text-lg font-bold quicksand xl:py-4 py-2">

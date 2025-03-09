@@ -78,10 +78,9 @@
             One or many rough sketches will be sent. Once the sketch is
             approved, payment must be done*. If you take advantage of this to
             get free sketches, I'll blacklist you. I'll send WIPs during the
-            process (after sketch and line). Changes can be requested before
-            lineart is done. I won't do more than 4 changes. Asking for many
-            changes may incur into additional charges. *When payment time comes,
-            I'll send you a paypal.me link.
+            process. Changes can be requested, I encourage changes before an idea is agreed. 
+            After a sketch is refined or lineart is done, changes might incur into additional costs depending on the complexity of the change.
+            When payment time comes, I'll send you a paypal.me link.
 
             <br/>
             I reserve some artistic freedom, there are some things I draw in a specific way and won't change that.
@@ -98,7 +97,7 @@
             Non-commercial use<br />
             I save the right to post your drawing online as well as on my web. If
             you don't want your drawing to be public, you must tell me although that
-            would incur into additional costs. I need a 2D ref, if possible unshaded.
+            would incur into additional costs (20% more on the final price). I need a 2D ref, if possible unshaded.
             If the ref is 3D or I can't understand it well enough I will decline
             your commission.
           </p>
