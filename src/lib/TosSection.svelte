@@ -95,6 +95,7 @@
           <p class="text-white text-sm xl:mb-8 mb-4">
             ETA: 1-2 weeks<br />
             Non-commercial use<br />
+            Payment is in Euros (€)<br />
             I save the right to post your drawing online as well as on my web. If
             you don't want your drawing to be public, you must tell me although that
             would incur into additional costs (20% more on the final price). I need a 2D ref, if possible unshaded.

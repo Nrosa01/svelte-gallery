@@ -9,7 +9,7 @@
     {
       title: "DOODLE/COMIC PAGE",
       description:
-        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler and looser than in other tiers with much less shading. Simple Background is included in this tier. Examples show post tf comic because this previously called 'post tf doodle page', but really this can be anything you want. This tier also work for 2 character interactions and in general, it's suitable for any multi character drawing.",
+        "A simple 3-6 panel of a sequence of actions or just different drawing of your character. The characters are drawn simpler and looser than in other tiers, some minimal shading is included. A simple background is included in this tier. Examples show post tf comic because this previously called 'post tf doodle page', but really this can be anything you want. This tier also work for 2 character interactions and in general, it's suitable for any multi character drawing. The more characters, the looser and less detailed.",
       images: prices_posttf,
       prices:
       [
@@ -26,9 +26,9 @@
       ]
     },
     {
-      title: "Shaded / Painting",
+      title: "Fully Shaded / Painting",
       description:
-        "This is the kind of work I usually upload to social medias. It's more polished than the previous tier (although examples are outdated, right now my style is more soft). Can be either thin line, lineless or a mix of both. Fullbody.",
+        "This is the kind of work I usually upload to social medias. It's more polished than the previous tier. Can be either thin line, lineless or a mix of both. Fullbody.",
       images: prices_shaded,
       prices:
       [
@@ -50,7 +50,7 @@
       ]
     },
     {
-      title: "Rough painting",
+      title: "Simple shaded",
       description:
         "This gets you a semi clean line with some shading, usually only one shade layer and one light layer. Can be either thin line, lineless or a mix of both. Fullbody.",
       images: prices_lined,
