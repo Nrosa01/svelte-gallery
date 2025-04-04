@@ -106,7 +106,10 @@
             Complex designs can incur into additional charges.<br />
             *I can draw humans, but I'm not really experienced with it. For post
             tf art, I can draw headshots. My struggles are complex body poses and
-            hands. I prefer to avoid drawing humans now except for headshots.
+            hands.<br />
+            All tiers are for fullbody, I'm not accepting headshots, but I do fullbodies as a secondary shot or complement to an existing fullbody drawing. All tiers have colour.<br />
+            I reserve the right to decline a commission for any reason without having to explain it. <br />I'm not currently in a bad economic position so I will only take
+            commissions that I really want to do. 
           </p>
           <br/>
           <p class="text-white text-sm">
