@@ -98,7 +98,10 @@
             Payment is in Euros (€)<br />
             I save the right to post your drawing online as well as on my web. If
             you don't want your drawing to be public, you must tell me although that
-            would incur into additional costs (20% more on the final price). I need a 2D ref, if possible unshaded.
+            would incur into additional costs (20% more on the final price). Also, I usually show WIPs
+            to my partner or some art friends to get some feedback/help. If you don't want this tell 
+            beforehand (this <strong>WON'T</strong> incur into additional charges)<br />
+            I need a 2D ref, if possible unshaded.
             If the ref is 3D or I can't understand it well enough I will decline
             your commission.
           </p>
