@@ -26,8 +26,7 @@
 
 <div class="flex flex-col w-full h-fit pt-8 xl:px-16 px-8">
   <h1 class="xl:text-sm text-xs text-slate-300 text-center pb-4">
-    The characters and trademarks mentioned are the property of their respective owners.
-    their respective owners. This content is used for illustrative purposes only and is not intended to
+    The characters and trademarks mentioned are the property of their respective owners. This content is used for illustrative purposes only and is not intended to
     infringe the copyrights of the mentioned owners.
   </h1>
 </div>
