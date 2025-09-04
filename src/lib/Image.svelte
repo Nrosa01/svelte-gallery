@@ -29,7 +29,7 @@
     <img
       class="max-h-full min-w-full object-cover align-bottom rounded-xl select-none"
       src="{image.src}"
-      alt="{image.title}"
+      alt="{image.title ?? image.src}"
       loading="lazy"
       on:click="{handleClick}"
       on:keydown />
