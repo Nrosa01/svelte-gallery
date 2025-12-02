@@ -20,11 +20,6 @@
     class="flex h-full place-items-center">
     <img alt="bluesky" class="ml-1 h-[55%] bluesky-icon" />
   </a>
-  <a
-    href="https://www.deviantart.com/srioni"
-    class="flex h-full place-items-center">
-    <img alt="devianart" class="h-[70%] devianart-icon" />
-  </a>
   <a href="https://t.me/rionisguild" class="flex h-full place-items-center">
     <img alt="telegram" class="h-[70%] telegram-icon" />
   </a>

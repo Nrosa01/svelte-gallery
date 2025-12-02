@@ -43,11 +43,11 @@
   <div></div>
   <div
     class="flex flex-raw w-full xl:h-10 h-10 max-h-fit items-center place-content-center pr-4">
-    <!-- <a
-      href="https://itaku.ee/profile/rioni"
+      <a
+      href="https://vgen.co/rioni/shop"
       class="flex h-full place-items-center">
-      <img alt="itaku" class="h-[70%] itaku-icon" />
-    </a> -->
+      <img alt="vgen" class="h-[70%] vgen-icon" />
+    </a>
     <a
       href="https://twitter.com/rionisguild"
       class="flex h-full place-items-center">
@@ -57,11 +57,6 @@
       href="https://bsky.app/profile/rioni.bsky.social"
       class="flex h-full place-items-center">
       <img alt="bluesky" class="ml-1 h-[55%] bluesky-icon" />
-    </a>
-    <a
-      href="https://www.deviantart.com/srioni"
-      class="flex h-full place-items-center">
-      <img alt="devianart" class="h-[70%] devianart-icon" />
     </a>
     <a href="https://t.me/rionisguild" class="flex h-full place-items-center">
       <img alt="telegram" class="h-[70%] telegram-icon" />

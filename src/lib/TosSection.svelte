@@ -8,7 +8,9 @@
     <p class="text-center text-white text-sm mb-8 quicksand">
       This is subject to change at any given point with no prior notice or
       possibility to claim. By commissioning me, Rioni, you agree to my Terms of
-      Service.
+      Service.<br/>
+      These TOS apply along the ones listed on VGen. This page is mainly here in case I decide
+      to stop working with VGen.
     </p>
 
     <ul class="flex flex-wrap text-center quicksand">
@@ -44,16 +46,9 @@
       <li class="flex-grow w-full xl:w-1/2 xl:px-2 md:px-4 mb-8">
         <div class="xl:py-8 px-8 py-4">
           <h2 class="subtitle text-center mb-8">How to Order</h2>
-          <p class="text-white text-sm xl:mb-8 mb-4">
-            Send me a DM (<a href="https://twitter.com/rionisguild" class="link"
-              >Twitter</a>
-            or
-            <a
-              href="https://discordapp.com/users/490599226200424448"
-              class="link">Discord</a
-            >), or mail
-            <a href="mailto:business@rioni.es" class="link">Rioni</a> with the following
-            information:
+          <p class="text-white text-sm xl:mb-4 mb-2">
+            Or send me a DM on <a href="vgen.co/rioni/shop" class="link"
+              >Vgen</a> with the following information:
           </p>
           <ul class=" text-white text-sm">
             <li>Commission type</li>
